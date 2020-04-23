@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: heat x frac t partial equation delta temperature eq ref volume flow thermal energy diffusion k cp label end item material e rho units dt begin altex law amount flux qx surface m fouriers through conservation enumerate z advection adv production any flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg balance gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold mathrm parameter v such increase above while small q f derivative sec describe used
+search: heat x frac t partial equation delta eq temperature ref volume flow thermal energy diffusion k cp label end item material e rho units dt begin altex law amount flux qx surface m fouriers through conservation enumerate z advection adv production any balance flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold mathrm parameter v such increase above while small q f derivative sec describe used
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -85,8 +85,9 @@ $$
 Replacing $Q$ in energy conservation equation above with this expression gives:
 $$
     \rho C_p \frac{dT}{dt} = \frac{q_x(x) - q_x(x+\Delta x)}{\Delta x}
+    \label{eq:heat balance 2}
 $$</p>
-<p>The right-hand side of this equation can be simplified further by a) recognizing that Equation \ref{eq:heat balance 1} applies to volumes of any size, including those that are infinitesimally small, so that $\Delta x \downarrow 0$, and b) using the 1st-order Taylor expansion:
+<p>The right-hand side of Equation \ref{eq:heat balance 2} can be simplified further by a) recognizing that Equation \ref{eq:heat balance 1} applies to volumes of any size, including those that are infinitesimally small, so that $\Delta x \downarrow 0$, and b) using the 1st-order Taylor expansion:
 $$
     f(x+\Delta x) = f(x) + \frac{df}{dx}\Delta x + O(\Delta x^2)
 $$
