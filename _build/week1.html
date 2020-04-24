@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: heat x t frac eq partial delta equation temperature ref volume label flow thermal diffusion energy k e cp end item material rho flux units dt begin altex law amount qx surface m fouriers through enumerate conservation z balance advection adv production any flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold mathrm parameter equations v such increase while small f derivative sec describe used assume
+search: heat x t frac eq partial delta equation temperature ref label volume flow thermal diffusion energy k e cp end item material rho law flux units dt fouriers begin altex amount qx surface m through enumerate conservation z balance advection adv production any flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold sec mathrm parameter equations v such increase while small f derivative describe used assume
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -39,8 +39,12 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fourier's-law">Fourier's law<a class="anchor-link" href="#Fourier's-law"> </a></h2><p>Fourier's law is an empirical equation named after Joseph Fourier, who published his theory on heat flux in 1822. In one dimension, heat flux $q_x$, which is the amount of heat that flows through one square metre of surface area and therefore has units of ${\mathrm W/m^2}$, is given by:</p>
-$$ q_x = -k \frac{dT}{dx} $$<p>Heat flows from hot to cold areas, so in the direction of negative temperature gradient $\frac{dT}{dx}$, hence the minus sign. The steeper the temperature gradient, the faster heat flows. Heat flux is also proportional to heat conductivity $k$, which is a material parameter:</p>
+<h2 id="Fourier's-law">Fourier's law<a class="anchor-link" href="#Fourier's-law"> </a></h2><p>\label{sec:Fourier's law}
+Fourier's law is an empirical equation named after Joseph Fourier, who published his theory on heat flux in 1822. In one dimension, heat flux $q_x$, which is the amount of heat that flows through one square metre of surface area and therefore has units of ${\mathrm W/m^2}$, is given by:</p>
+$$ 
+q_x = -k \frac{dT}{dx}
+\label{eq:Fourier's law}
+$$<p>Heat flows from hot to cold areas, so in the direction of negative temperature gradient $\frac{dT}{dx}$, hence the minus sign. The steeper the temperature gradient, the faster heat flows. Heat flux is also proportional to heat conductivity $k$, which is a material parameter:</p>
 <p><img src="images/Fouriers_law.png" alt="Fourier&#39;s law">
 _Fourier's law $q_x = -k \frac{dT}{dx}$ describes how heat flows from a hot area (in this case with temperature $T+dT$ to a cold area with temperature $T$), and the heat flow is proportional to the temperature gradient $\frac{dT}{dx}$ and the heat conductivity $k$._</p>
 <p>So inhomogeneous temperature distributions will result in the flow of heat. But heat flux, in return, will lead to changes in the temperature distribution., which is not captured in Fourier's law. For that we need an additional constraint: the <em>conservation of heat</em>.</p>
@@ -101,9 +105,9 @@ $$
 Using this in Equation \ref{eq:heat balance 1} gives:
 $$
     \rho C_p \frac{dT}{dt} = -\frac{dq}{dx}
-    \label{eq:heat balance 2}
+    \label{eq:heat balance 3}
 $$</p>
-<h2 id="The-heat-diffusion-equation">The heat diffusion equation<a class="anchor-link" href="#The-heat-diffusion-equation"> </a></h2><p>Section \ref{sec:Fourier's law} shows how Fourier's law describes how heat flux can be calculated from the temperature distribution, while section \ref{sec:Conservation of heat} describes how heat flux affects the temperature in return. While temperature is fairly easily measured, heat flux is not, so this equation is not very useful in practice. We could replace the heat flux in Equation \ref{eq:heat balance 2} with Fourier's law (Equation \ref{sec:Fourier's law}) to eliminate the explicit appearance of heat flux from the equation:
+<h2 id="The-heat-diffusion-equation">The heat diffusion equation<a class="anchor-link" href="#The-heat-diffusion-equation"> </a></h2><p>Section \ref{sec:Fourier's law} shows how Fourier's law describes how heat flux can be calculated from the temperature distribution, while section \ref{sec:Conservation of heat} describes how heat flux affects the temperature in return. While temperature is fairly easily measured, heat flux is not, so this equation is not very useful in practice. We could replace the heat flux in Equation \ref{eq:heat balance 2} with Fourier's law (Equation \ref{eq:Fourier's law}) to eliminate the explicit appearance of heat flux from the equation:
 $$
     \rho C_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x} (k \frac{\partial T}{\partial x}) 
     \label{eq:heat diff 1}
