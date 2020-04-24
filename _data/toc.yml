@@ -22,17 +22,9 @@
 # See the links below for an example.
 
 # Top-level page
-- title: Week 1
+- title: The Heat equation
   url: /week1
   not_numbered: false
-  expand_sections: true
-  sections:
-  - title: The heat equation
-    url: /week1
-    not_numbered: false
-  - title: Exercises week 1, heat transfer in the Earth
-    url: /exercises1
-    not_numbered: true
 
 # Adds a searchbar link
 - title: Search
