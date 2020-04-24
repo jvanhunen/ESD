@@ -21,13 +21,11 @@
 #
 # See the links below for an example.
 
-# Top-level page
-- title: The Heat equation
-  url: /week1
-  not_numbered: false
-- title: The Heat equation: exercises
-  url: /exercises1
-  not_numbered: false
+# External link
+- title: GitHub repository
+  url: https://github.com/jupyter/jupyter-book
+  external: true
+  not_numbered: true
 
 # Adds a searchbar link
 - title: Search
@@ -35,3 +33,19 @@
 
 # Divider for meta-pages and content page
 - divider: true
+
+# Add a header and sample content section
+- header: Demo textbook
+
+# A chapter w/ a collection of sections beneath it
+- title: Week 1
+  url: /week1
+  not_numbered: false
+  expand_sections: true
+  sections:
+  - title: The Heat Equation
+    url: /week1
+    not_numbered: true
+  - title: The Heat Equation - Exercises
+    url: /exercises1
+    not_numbered: true

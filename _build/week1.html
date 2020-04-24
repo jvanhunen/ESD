@@ -4,20 +4,20 @@ kernel_name: python3
 kernel_path: content
 has_widgets: false
 title: |-
-  The Heat equation
+  Week 1
 pagenum: 0
 prev_page:
   url: 
 next_page:
-  url: 
+  url: /week1.html
 suffix: .ipynb
-search: heat x frac t eq partial delta equation volume label temperature energy ref e cp flow thermal rho law flux dt fouriers diffusion amount qx k material conservation balance adv m flowing advection through dx production flows any y z control right gives diff processes direction gradient case not total left location again vx earth proportional area units w images png equations using consider v small f derivative describe used h terms process derived cold should system change dimension surface therefore mathrm also conductivity describes figure below such mass capacity kg d only boundary above de positive while hand section
+search: heat x frac t eq partial delta equation volume temperature label energy ref e cp flow thermal rho law flux dt fouriers diffusion amount qx k conservation material balance adv m flowing dx advection production flows any through y z control right gives diff processes direction gradient case not total left location again vx proportional area units w equations using consider v small f derivative describe h terms process derived cold should system change dimension surface therefore mathrm conductivity images png describes figure below such mass capacity kg d only boundary above de positive while hand section very kappa mathematically
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
     <main class="jupyter-page">
-    <div id="page-info"><div id="page-title">The Heat equation</div>
+    <div id="page-info"><div id="page-title">Week 1</div>
 </div>
     
 <div class="jb_cell">
@@ -125,10 +125,11 @@ $$
     \frac{\partial T}{\partial t} = \kappa \frac{\partial^2 T}{\partial x^2}
     \label{eq:heat diff 3}
 $$</p>
-<h2 id="Heat-advection">Heat advection<a class="anchor-link" href="#Heat-advection"> </a></h2><p>Heat advection occurs when material is flowing around: as it moves, it transports thermal energy from one place to another. To describe this mathematically, we can use a very similar approach to the one used in section <a href="#Conservation-of-heat">Conservation of heat</a>, which is illustrated in the <a href="#heat_advection">heat advection</a> Figure below.
-<img src="images/heat_advection.png" alt="Heat advection \label{fig:heat_advection}"></p>
-<p><img src="images/heat_advection.png">
-<a name="heat_advection"><it>Control volume used to mathematically describe the conservation of thermal energy during heat advection.</it></a></p>
+<h2 id="Heat-advection">Heat advection<a class="anchor-link" href="#Heat-advection"> </a></h2><p>Heat advection occurs when material is flowing around: as it moves, it transports thermal energy from one place to another. To describe this mathematically, we can use a very similar approach to the one used in section <a href="#Conservation-of-heat">Conservation of heat</a>, which is illustrated in the <a href="#heat_advection">heat advection</a> Figure below.</p>
+<p><a name="heat_advection">
+    <img src="images/heat_advection.png">
+    <it>Control volume used to mathematically describe the conservation of thermal energy during heat advection.</it>
+</a></p>
 <p>Again, let's first consider the 1-D case of heat advection only in the $x$-direction. If we assume that the material in the volume is incompressible, then the amount of material flowing in on one end must equal the amount of material flowing out on the other end. But the in- and outflow temperatures can be different. If the inflow is hotter than the outflow, then the net amount of thermal energy inside the control volume will increase:
 $$
     \frac{dE}{dt} = E_{adv,x}(x) - E_{adv,x}(x+\Delta x)
@@ -137,7 +138,7 @@ $$
 where $E$ is again the thermal energy inside the control volume, and $E_{adv,x}$ is the thermal energy flowing in our out the volume in $x$-direction per unit of time. We now use again Equation \ref{eq:E-T} and one similar to Equation \ref{eq:heat flux} for $E_{adv,x}$:
 $$
     E_{adv,x} = \Delta y \Delta z v_x \rho C_p T
-    \label{eq:E-T}
+    \label{eq:E-T-2}
 $$</p>
 <p>where $v_x$ is the flow velocity. Combining these last two equations gives:
 $$
@@ -186,18 +187,6 @@ $$
     \label{eq:heat eq}
 $$
 But keep in mind that this is not an exhaustive list of processes that can affect the temperature of the control volume (or more generally, the temperature at any point in the Earth): heat can be transported by radiation, and additional heat sources or sinks exist, such as adiabatic heating. To decide which 'source terms' to include without making the heat equation longer (and therefore more complicated) than necessary, always consider whether any of the terms are significant for the nature (e.g. size, duration, location) of the process.</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercises-week-1,-heat-transfer-in-the-Earth">Exercises week 1, heat transfer in the Earth<a class="anchor-link" href="#Exercises-week-1,-heat-transfer-in-the-Earth"> </a></h2><p>This set of questions will deal with heat transfer, both in general and applied to the Earth. 
-By working through these questions you will build up a better understanding of some of the key ideas introduced in the lecture. It will also make you familiar with some of the parameters discussed and used throughout the course. All material covered in practicals is examinable.</p>
 
 </div>
 </div>
