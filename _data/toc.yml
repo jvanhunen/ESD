@@ -25,6 +25,9 @@
 - title: The Heat equation
   url: /week1
   not_numbered: false
+- title: The Heat equation: exercises
+  url: /exercises1
+  not_numbered: false
 
 # Adds a searchbar link
 - title: Search
