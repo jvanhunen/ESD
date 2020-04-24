@@ -9,9 +9,9 @@ pagenum: 0
 prev_page:
   url: 
 next_page:
-  url: 
+  url: /week1.html
 suffix: .ipynb
-search: heat x t frac eq partial delta equation temperature ref label volume flow thermal diffusion energy k e cp end item material rho law flux units dt fouriers begin altex amount qx surface m through enumerate conservation z balance advection adv production any flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold sec mathrm parameter equations v such increase while small f derivative describe used assume
+search: heat x frac t eq partial delta equation volume ref label temperature energy e cp flow thermal rho flux dt law diffusion fouriers amount qx k material conservation balance adv m flowing through dx control advection production flows any y z right gives diff processes direction gradient case not total left location again vx earth proportional area units w equations using consider v small f derivative describe used h terms process derived cold should system change dimension surface therefore mathrm also conductivity images png describes figure such mass capacity kg d only boundary above de positive while hand section sec
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -39,8 +39,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fourier's-law">Fourier's law<a class="anchor-link" href="#Fourier's-law"> </a></h2><p>\label{sec:Fourier's law}
-Fourier's law is an empirical equation named after Joseph Fourier, who published his theory on heat flux in 1822. In one dimension, heat flux $q_x$, which is the amount of heat that flows through one square metre of surface area and therefore has units of ${\mathrm W/m^2}$, is given by:</p>
+<h2 id="Fourier's-law">Fourier's law<a class="anchor-link" href="#Fourier's-law"> </a></h2><p>Fourier's law is an empirical equation named after Joseph Fourier, who published his theory on heat flux in 1822. In one dimension, heat flux $q_x$, which is the amount of heat that flows through one square metre of surface area and therefore has units of ${\mathrm W/m^2}$, is given by:</p>
 $$ 
 q_x = -k \frac{dT}{dx}
 \label{eq:Fourier's law}
@@ -197,114 +196,6 @@ But keep in mind that this is not an exhaustive list of processes that can affec
 <h2 id="Exercises-week-1,-heat-transfer-in-the-Earth">Exercises week 1, heat transfer in the Earth<a class="anchor-link" href="#Exercises-week-1,-heat-transfer-in-the-Earth"> </a></h2><p>This set of questions will deal with heat transfer, both in general and applied to the Earth. 
 By working through these questions you will build up a better understanding of some of the key ideas introduced in the lecture. It will also make you familiar with some of the parameters discussed and used throughout the course. All material covered in practicals is examinable.</p>
 
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>\setcounter{exnum}{0}
-\begin{altex}{units1}
-{\bf [Key ideas/concepts: deriving units of physical parameters]}
-\begin{enumerate}[a)]
-\item \label{units1a} From the definition of heat flow (q) given in the lecture, determine the units of the parameter $k$ (thermal conductivity). The answer should be given in standard SI units - see handout on common material parameters. Add your answers to your parameter handout sheet.
-\item Assume a thermal conductivity $k = 4$ (in the units you just calculated in part \ref{units1a}. Make assumptions for the thickness of a typical continental lithosphere, the surface temperature and the mantle temperature to estimate the typical heat flow through this lithosphere. Ignore radiogenic heating.
-\item Suppose we would be able to capture this heat. How large a surface area would we need to run a $40$ W lightbulb?
-\item If the whole Earth would be covered with such continental lithosphere, what would be the total heat flow out of the Earth?
-\item Compare this to the total surface heat flow of the real Earth, which is around $40$ TW = $40 \times 10^{12}$ W. How does this compare to your estimate in the previous question, and what could be the reasons for any discrepancy?
-\end{enumerate}
-\end{altex}</p>
-
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{altex}{units2}
-{\bf [Key ideas/concepts: deriving units of physical parameters]}\\
-From the diffusion equation, determine the units for thermal diffusivity, $\kappa$. The answer should be given in standard SI units - see handout on common material parameters. Add your answers to your parameter handout sheet.
-\end{altex}
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{altex}{estimates1}
-{\bf [Key ideas/concepts: estimating diffusion time- and length scales 1]}
-Quick estimates can be made on the length- and time scale of heat transfer processes by approximating the differentials from the heat equation (see slide 16 of lecture notes). 
-\begin{enumerate}[a)]
-\item Use this technique to estimate the approximate diffusive cooling time for the whole mantle (given that the mantle is ~3000 km thick). Is this cooling time likely to be an underestimate or overestimate of the Earth's cooling time and why?
-\item A county council in the UK is considering using abandoned mines as geothermal heat source. To achieve that, they consider injecting cold water at one end of an abandoned mine tunnel. The mine tunnel has a width and height of 2 m, and is 1 km long, and the mine walls are significantly warmer than the injected water. How slow will the water have to move through the tunnel so that it has enough time to warm up to approximately the mine wall temperature before reaching the mine exit? Assume that water has a heat capacity of 4200 J/kg,K, a density of 1000 $\mathrm{kg/m^3}$, and a conductivity of 0.6 W/m,K.
-\end{enumerate}
-\end{altex}
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{altex}{estimates2}
-{\bf [Key ideas/concepts: estimating diffusion time- and length scales 2: penetration of periodic surface temperature fluctuations]} 
-Use the same technique as in Exercise \arabic{chapter}.\ref{estimates1} to estimate:
-\begin{enumerate}[a)]
-\item \label{approx:skindepth} the penetration depth of daily and annual temperature fluctuations.
-\item Using separation of variables, an exact, analytical solution can be obtained for the penetration of heat from a surface that heats and cools periodically, of which the solution is: 
-\begin{equation}
-    T = T_0 + \Delta T \exp{\left(-z \sqrt{\frac{\omega}{2 \kappa}}\right)} \cos{\left(\omega t -z \sqrt{\frac{\omega}{2 \kappa}}\right)},
-\end{equation}
-with $z$ the depth below the surface, $T_0$ the average surface temperature, $\Delta T$ the periodic temperature fluctuation around the average, and  $\omega = \frac{2 \pi}{\tau}$ the circular frequency related to the period $\tau$ of the fluctuation. The 'skin depth' of the temperature fluctuation is defined as the depth where the fluctuations have decreased in amplitude by a factor  $\displaystyle \frac{1}{e}$ . Calculate the skin depth for daily and annual temperature fluctuations, and compare your answers to those in part \ref{approx:skindepth}.
-\end{enumerate}
-\end{altex}
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{altex}{MOR}
-{\bf [Key ideas/concepts: competition between advection and diffusion at mid-ocean ridges]}
-At mid-ocean ridges, advection of upwelling material tends to heat up this area, while diffusion of heat through the surface tends to cool it down.
-\begin{enumerate}[a)]
-\item Determine which terms of the heat equation \ref{eq:heat eq} are relevant for this situation.
-\item Use again the technique of approximating the differentials to provide again a simple order-of-magnitude approximation equation (as on slide 16).
-\item Estimate the approximate thickness of lithosphere at the mid-ocean ridge for a slow- ($\sim 1$ cm/yr) and fast-spreading ridge ($\sim 10$ cm/yr).
-\item Can you think of any potential shortcomings in this order-of-magnitude estimate?
-\end{enumerate}
-\end{altex}
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-\begin{altex}{radiogenic_heating}
-{\bf [Key ideas/concepts: the significance of radiogenic heat production]} It is often stated that radiogenic heat production is important in continents, but negligible in oceanic mantle lithosphere. Let's investigate this, using the simplified heat equation \ref{eq:heat prod 2}.
-\begin{enumerate} [a)]
-\item Use the Table from Fowler (see lecture notes slide 20) to look up how much heat is generated in peridotite. Assuming that this heat does not diffuse away, but stays trapped, what would be the local temperature increase over 1 Myr? Assume a local heat capacity $C_P$ of 1000 J/kg,K.
-\item How much would this be over the typical lifespan of oceanic lithosphere? Is this a significant temperature increase?
-\end{enumerate}
-
-\end{altex}
 </div>
 </div>
 </div>
