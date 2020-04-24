@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: heat x frac t partial equation delta eq temperature ref volume flow thermal energy diffusion k cp label end item material e rho units dt begin altex law amount flux qx surface m fouriers through conservation enumerate z advection adv production any balance flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold mathrm parameter v such increase above while small q f derivative sec describe used
+search: heat x t frac eq partial delta equation temperature ref volume label flow thermal diffusion energy k e cp end item material rho flux units dt begin altex law amount qx surface m fouriers through enumerate conservation z balance advection adv production any flowing right earth w dx using total control left again key ideas processes flows area conductivity not y kg gives diff kappa bf concepts lithosphere estimate direction gradient case should given consider capacity location vx radiogenic lecture terms parameters mine depth proportional cold mathrm parameter equations v such increase while small f derivative sec describe used assume
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -19,8 +19,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
     <main class="jupyter-page">
     <div id="page-info"><div id="page-title">Week 1</div>
 </div>
-    
-<div class="jb_cell">
+    <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -41,8 +40,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Fourier's-law">Fourier's law<a class="anchor-link" href="#Fourier's-law"> </a></h2><p>Fourier's law is an empirical equation named after Joseph Fourier, who published his theory on heat flux in 1822. In one dimension, heat flux $q_x$, which is the amount of heat that flows through one square metre of surface area and therefore has units of ${\mathrm W/m^2}$, is given by:</p>
-<p>$$ q_x = -k \frac{dT}{dx} $$</p>
-<p>Heat flows from hot to cold areas, so in the direction of negative temperature gradient $\frac{dT}{dx}$, hence the minus sign. The steeper the temperature gradient, the faster heat flows. Heat flux is also proportional to heat conductivity $k$, which is a material parameter:</p>
+$$ q_x = -k \frac{dT}{dx} $$<p>Heat flows from hot to cold areas, so in the direction of negative temperature gradient $\frac{dT}{dx}$, hence the minus sign. The steeper the temperature gradient, the faster heat flows. Heat flux is also proportional to heat conductivity $k$, which is a material parameter:</p>
 <p><img src="images/Fouriers_law.png" alt="Fourier&#39;s law">
 _Fourier's law $q_x = -k \frac{dT}{dx}$ describes how heat flows from a hot area (in this case with temperature $T+dT$ to a cold area with temperature $T$), and the heat flow is proportional to the temperature gradient $\frac{dT}{dx}$ and the heat conductivity $k$._</p>
 <p>So inhomogeneous temperature distributions will result in the flow of heat. But heat flux, in return, will lead to changes in the temperature distribution., which is not captured in Fourier's law. For that we need an additional constraint: the <em>conservation of heat</em>.</p>
@@ -57,13 +55,16 @@ _Fourier's law $q_x = -k \frac{dT}{dx}$ describes how heat flows from a hot area
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conservation-of-heat">Conservation of heat<a class="anchor-link" href="#Conservation-of-heat"> </a></h2><p>Many fundamental equations are derived using the simple concept of conservation of something. In this case, we will make the assumption of the conservation of total (thermal) energy in the system. Consider a arbitrary volume $V=\Delta x \Delta y \Delta z$ of material as depicted in figure below. Such volume is often referred to as a {\it control volume}. The volume contains a certain amount of thermal energy $E$, which is determined by its temperature:</p>
-<p>$$ E = M C_p T = \rho V C_p T = \rho \Delta x \Delta y \Delta z C_p T $$</p>
-<p>in which $M$, $\rho$, and $C_p$ are the mass, density and {\it specific heat} (also known as <em>heat capacity</em>) of the material in the volume, respectively. This heat capacity is defined as the energy that is required to heat up 1 kg of material by $1^o$C, or 1 K. Heat can flow in and out of the volume, but this heat flow will be accounted for by the following energy balance:</p>
+$$ 
+E = M C_p T = \rho V C_p T = \rho \Delta x \Delta y \Delta z C_p T 
+\label{eq:E-T}
+$$<p>in which $M$, $\rho$, and $C_p$ are the mass, density and {\it specific heat} (also known as <em>heat capacity</em>) of the material in the volume, respectively. This heat capacity is defined as the energy that is required to heat up 1 kg of material by $1^o$C, or 1 K. Heat can flow in and out of the volume, but this heat flow will be accounted for by the following energy balance:</p>
 <blockquote><p>The thermal energy increase/decrease in the volume must equal the amount of thermal energy flowing in/out of the volume.</p>
 </blockquote>
 <p>Let's first restrict ourselves to a 1-D scenario, i.e. heat (or thermal energy) flowing only in the $x$-direction, $Q_x$, which means that the top/bottom/front/back faces of the volume are perfectly insulating, and do not allow any heat flowing through them, and $Q_y = Q_z = 0$. So heat only flows in or out through the left boundary at location $x$, and through the right boundary at location $x+\Delta x$. We can then translate the above thermal energy balance sentence into a mathematical equation:
 $$
     \frac{dE}{dt} = Q_x(x) - Q_x(x+\Delta x) 
+    \label{eq:heat balance 1}
 $$
 In the figure below, the coordinate system is chosen such that $x$ increases to the right. So positive heat flow $Q_x$ is to the right, and negative heat flow is to the left. So positive heat flow at the left boundary at location $x$ will flow into the volume, while positive heat flow at location $x+\Delta x$ will lead to heat flowing out of the volume. This explains the minus sign in equation above.</p>
 <p><img src="images/heat_conservation.png" alt="Heat conservation">
@@ -81,8 +82,9 @@ In the figure below, the coordinate system is chosen such that $x$ increases to 
 <p>The total heat flow $Q_x$ (in units of Watts, W) through the left or right surface is defined by the {\it heat flux $q_x$} (in units of ${\mathrm W/m^2}$) and the area of the surface $A=\Delta y \Delta z$ (in ${\mathrm m^2}$) as:
 $$
     Q=q\Delta y \Delta z
+    \label{eq:heat flux}
 $$
-Replacing $Q$ in energy conservation equation above with this expression gives:
+Combining Equations \ref{eq:E-T} to \ref{eq:heat flux} gives:
 $$
     \rho C_p \frac{dT}{dt} = \frac{q_x(x) - q_x(x+\Delta x)}{\Delta x}
     \label{eq:heat balance 2}
@@ -221,11 +223,10 @@ By working through these questions you will build up a better understanding of s
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{altex}{units2}
+\begin{altex}{units2}
 {\bf [Key ideas/concepts: deriving units of physical parameters]}\\
 From the diffusion equation, determine the units for thermal diffusivity, $\kappa$. The answer should be given in standard SI units - see handout on common material parameters. Add your answers to your parameter handout sheet.
-\end{altex}</p>
-
+\end{altex}
 </div>
 </div>
 </div>
@@ -235,15 +236,14 @@ From the diffusion equation, determine the units for thermal diffusivity, $\kapp
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{altex}{estimates1}
+\begin{altex}{estimates1}
 {\bf [Key ideas/concepts: estimating diffusion time- and length scales 1]}
 Quick estimates can be made on the length- and time scale of heat transfer processes by approximating the differentials from the heat equation (see slide 16 of lecture notes). 
 \begin{enumerate}[a)]
 \item Use this technique to estimate the approximate diffusive cooling time for the whole mantle (given that the mantle is ~3000 km thick). Is this cooling time likely to be an underestimate or overestimate of the Earth's cooling time and why?
 \item A county council in the UK is considering using abandoned mines as geothermal heat source. To achieve that, they consider injecting cold water at one end of an abandoned mine tunnel. The mine tunnel has a width and height of 2 m, and is 1 km long, and the mine walls are significantly warmer than the injected water. How slow will the water have to move through the tunnel so that it has enough time to warm up to approximately the mine wall temperature before reaching the mine exit? Assume that water has a heat capacity of 4200 J/kg,K, a density of 1000 $\mathrm{kg/m^3}$, and a conductivity of 0.6 W/m,K.
 \end{enumerate}
-\end{altex}</p>
-
+\end{altex}
 </div>
 </div>
 </div>
@@ -253,7 +253,7 @@ Quick estimates can be made on the length- and time scale of heat transfer proce
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{altex}{estimates2}
+\begin{altex}{estimates2}
 {\bf [Key ideas/concepts: estimating diffusion time- and length scales 2: penetration of periodic surface temperature fluctuations]} 
 Use the same technique as in Exercise \arabic{chapter}.\ref{estimates1} to estimate:
 \begin{enumerate}[a)]
@@ -264,8 +264,7 @@ Use the same technique as in Exercise \arabic{chapter}.\ref{estimates1} to estim
 \end{equation}
 with $z$ the depth below the surface, $T_0$ the average surface temperature, $\Delta T$ the periodic temperature fluctuation around the average, and  $\omega = \frac{2 \pi}{\tau}$ the circular frequency related to the period $\tau$ of the fluctuation. The 'skin depth' of the temperature fluctuation is defined as the depth where the fluctuations have decreased in amplitude by a factor  $\displaystyle \frac{1}{e}$ . Calculate the skin depth for daily and annual temperature fluctuations, and compare your answers to those in part \ref{approx:skindepth}.
 \end{enumerate}
-\end{altex}</p>
-
+\end{altex}
 </div>
 </div>
 </div>
@@ -275,7 +274,7 @@ with $z$ the depth below the surface, $T_0$ the average surface temperature, $\D
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{altex}{MOR}
+\begin{altex}{MOR}
 {\bf [Key ideas/concepts: competition between advection and diffusion at mid-ocean ridges]}
 At mid-ocean ridges, advection of upwelling material tends to heat up this area, while diffusion of heat through the surface tends to cool it down.
 \begin{enumerate}[a)]
@@ -284,8 +283,7 @@ At mid-ocean ridges, advection of upwelling material tends to heat up this area,
 \item Estimate the approximate thickness of lithosphere at the mid-ocean ridge for a slow- ($\sim 1$ cm/yr) and fast-spreading ridge ($\sim 10$ cm/yr).
 \item Can you think of any potential shortcomings in this order-of-magnitude estimate?
 \end{enumerate}
-\end{altex}</p>
-
+\end{altex}
 </div>
 </div>
 </div>
@@ -295,14 +293,14 @@ At mid-ocean ridges, advection of upwelling material tends to heat up this area,
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>\begin{altex}{radiogenic_heating}
+\begin{altex}{radiogenic_heating}
 {\bf [Key ideas/concepts: the significance of radiogenic heat production]} It is often stated that radiogenic heat production is important in continents, but negligible in oceanic mantle lithosphere. Let's investigate this, using the simplified heat equation \ref{eq:heat prod 2}.
 \begin{enumerate} [a)]
 \item Use the Table from Fowler (see lecture notes slide 20) to look up how much heat is generated in peridotite. Assuming that this heat does not diffuse away, but stays trapped, what would be the local temperature increase over 1 Myr? Assume a local heat capacity $C_P$ of 1000 J/kg,K.
 \item How much would this be over the typical lifespan of oceanic lithosphere? Is this a significant temperature increase?
-\end{enumerate}</p>
-<p>\end{altex}</p>
+\end{enumerate}
 
+\end{altex}
 </div>
 </div>
 </div>
