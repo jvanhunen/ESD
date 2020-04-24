@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: heat x frac t counter eq partial hcounter delta h equation volume ref label temperature e energy cp flow thermal rho flux dt law diffusion fouriers amount qx k material div conservation balance adv before m flowing style increment content through dx control advection production case reset p hlevel flows any y z right gives diff numbering size color processes direction gradient not total left location again vx earth headings inside body proportional area units w equations using consider v small f derivative describe used terms html font em process derived cold should system change dimension surface therefore mathrm also
+search: heat x frac t eq partial delta equation volume ref label temperature energy e cp flow thermal rho law flux dt fouriers diffusion amount qx k material conservation balance adv m flowing through dx control advection production flows any y z right gives diff processes direction gradient case not total left location again vx earth proportional area units w equations using consider v small f derivative describe used h terms process derived cold should system change dimension surface therefore mathrm also conductivity images png describes figure such mass capacity kg d only boundary above de positive while hand section very
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -20,85 +20,6 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
     <div id="page-info"><div id="page-title">The Heat equation</div>
 </div>
     <div class="jb_cell">
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>&lt;!DOCTYPE html&gt;</p>
-<p><html></p>
-<p><head></p>
-<p><style>
-/<em> Heading Numbering CSS </em>/
-/<em> <a href="https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a">https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a</a> </em>/
-/<em> problem with numbering in case headings are e.g. inside DIV tags </em>/</p>
-<p>body { counter-reset: h1counter; }
-h1 { counter-reset: h2counter; }
-h2 { counter-reset: h3counter; }
-h3 { counter-reset: h4counter; }
-h4 { counter-reset: h5counter; }
-h5 { counter-reset: h6counter; }
-h6 {}</p>
-<p>h1:before {
-    counter-increment: h1counter;
-    content: counter(h1counter) ".\0000a0\0000a0";
-}</p>
-<p>h2:before {
-    counter-increment: h2counter;
-    content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
-}</p>
-<p>h3:before {
-    counter-increment: h3counter;
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-}</p>
-<p>h4:before {
-    counter-increment: h4counter;
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
-}</p>
-<p>h5:before {
-    counter-increment: h5counter;
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0\0000a0";
-}</p>
-<p>h6:before {
-    counter-increment: h6counter;
-    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0\0000a0";
-}</p>
-<p>/<em> for headings that shall have no numbering <a href="http://2ality.com/2012/01/numbering-headingshtml.html">http://2ality.com/2012/01/numbering-headingshtml.html</a> </em>/
-.nocount:before {
-    content: none;
-    counter-increment: none;
-}
-&lt;/style&gt;
-&lt;/head&gt;</p>
-<body>
-
-<p style="font-size: 2em; color: blue;">Test Heading Numbering via CSS</p>
-
-<p style="font-size: 1.5em; color: red;">Numbering fails if headings are in DIV tags:</p>
-<div>
-  <h1>level 1</h1>
-</div>
-<div>
-  <h2>level 2</h2>
-</div>
-<div>
-  <h3 style="color: red;">level 3</h3>
-</div>
-<div>
-  <h4 style="color: red;">level 4</h4>
-</div>
-
-<p style="font-size: 1.5em; color: green;">Numbering works if headings are directly in body:</p>
-<h1>level 1</h1>
-<h2>level 2</h2>
-<h3>level 3</h3>
-<h4>level 4</h4>
-
-</body>
-</div>
-</div>
-</div>
-</div>
-
-<div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -185,7 +106,7 @@ $$
     \rho C_p \frac{dT}{dt} = -\frac{dq}{dx}
     \label{eq:heat balance 3}
 $$</p>
-<h2 id="The-heat-diffusion-equation">The heat diffusion equation<a class="anchor-link" href="#The-heat-diffusion-equation"> </a></h2><p>Section \ref{sec:Fourier's law} shows how Fourier's law describes how heat flux can be calculated from the temperature distribution, while section \ref{sec:Conservation of heat} describes how heat flux affects the temperature in return. While temperature is fairly easily measured, heat flux is not, so this equation is not very useful in practice. We could replace the heat flux in Equation \ref{eq:heat balance 2} with Fourier's law (Equation \ref{eq:Fourier's law}) to eliminate the explicit appearance of heat flux from the equation:
+<h2 id="The-heat-diffusion-equation">The heat diffusion equation<a class="anchor-link" href="#The-heat-diffusion-equation"> </a></h2><p>Section <a href="#Fourier&#39;s-law">Fourier's law</a> shows how Fourier's law describes how heat flux can be calculated from the temperature distribution, while section \ref{sec:Conservation of heat} describes how heat flux affects the temperature in return. While temperature is fairly easily measured, heat flux is not, so this equation is not very useful in practice. We could replace the heat flux in Equation \ref{eq:heat balance 2} with Fourier's law (Equation \ref{eq:Fourier's law}) to eliminate the explicit appearance of heat flux from the equation:
 $$
     \rho C_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x} (k \frac{\partial T}{\partial x}) 
     \label{eq:heat diff 1}
