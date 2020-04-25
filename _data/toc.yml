@@ -23,7 +23,7 @@
 
 # External link
 - title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
+  url: https://github.com/jvanhunen/ESDbook.git
   external: true
   not_numbered: true
 
@@ -35,17 +35,17 @@
 - divider: true
 
 # Add a header and sample content section
-- header: Demo textbook
+- header: Lecture notes and Exercises
 
 # A chapter w/ a collection of sections beneath it
 - title: Week 1
   url: /week1
-  not_numbered: false
+  not_numbered: true
   expand_sections: true
   sections:
   - title: The Heat Equation
     url: /week1
     not_numbered: true
-  - title: The Heat Equation - Exercises
+  - title: Exercises
     url: /exercises1
     not_numbered: true
