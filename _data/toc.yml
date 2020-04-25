@@ -49,3 +49,6 @@
   - title: Exercises
     url: /exercises1
     not_numbered: true
+  - title: Answers
+    url: /answers1
+    not_numbered: true

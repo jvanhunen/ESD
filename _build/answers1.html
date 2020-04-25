@@ -1,0 +1,93 @@
+---
+interact_link: content/answers1.ipynb
+kernel_name: python3
+kernel_path: content
+has_widgets: false
+title: |-
+  Answers
+pagenum: 3
+prev_page:
+  url: /exercises1.html
+next_page:
+  url: 
+suffix: .ipynb
+search: frac delta t m kappa displaystyle z heat partial k mathrm s gives diffusion times units w earth key ideas concepts dt flow only equation sqrt cooling not heating dz j lithosphere pi approximating differentials reduces using advection cm q temperature direction km surface mantle respectively production oceanic y half daily hours tau radiogenic vz answers transfer deriving physical parameters thickness area r because x estimating length scales transport approximately speed reference frame mine case into velocity cp penetration fluctuations depth yearly year estimates probably fluctuation exp left omega right part ridges terms approximate steady state item yr slow spreading
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Answers</div>
+</div>
+    
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Answers-week-1:-heat-transfer-in-the-Earth">Answers week 1: heat transfer in the Earth<a class="anchor-link" href="#Answers-week-1:-heat-transfer-in-the-Earth"> </a></h2><ol>
+<li><p><strong>Key ideas/concepts: deriving units of physical parameters</strong></p>
+<ol>
+<li>$\displaystyle q = -k\frac{dT}{dz}$, where $q$ (in $\displaystyle \mathrm{\frac{W}{m^2}}=\frac{J}{m^2 s}$) is heat flow, $k$ is thermal conductivity, and $\displaystyle \frac{dT}{dz}$ (in K/m) is the spatial derivative of temperature in $z$-direction. So the units of $k$ are W/m,K $=$ J/s,m,K.</li>
+<li>With a lithosphere thickness of $100$ km = $10^5$ m, and a temperature of the surface and the mantle of 0 and 1000 $\mathrm {}^oC$, respectively, this gives \ 
+$q = -4\times(1000-0)/10^5 = -0.04 \mathrm{W/m^2}$, or 40 $\mathrm {mW/m^2}$. </li>
+<li>$40$ W / $0.04$ $\mathrm{ W/m^2}$ = $1000$ $\mathrm{m^2}$, about the area of the Earth Science building. So the Earth is releasing quite a lot of energy.</li>
+<li>Multiply 0.04 $\mathrm{W/m^2}$ by $4\pi r^2$ surface area of Earth, with r=6371 km = 6371,000 m. This gives around $2\times10^{13}$ W = $20$ TW. </li>
+<li>Because no heat production assumed, and because oceanic lithosphere is thinner, so has a higher heat flow.</li>
+</ol>
+</li>
+<li><p><strong>Key ideas/concepts: deriving units of physical parameters</strong></p>
+<ol>
+<li>$T$ has units of $K$, $t$ has units of $s$, and $x$ has units of $m$. Therefore $\kappa$ has units of $\mathrm {m^2/s}$.</li>
+</ol>
+</li>
+<li><p><strong>Key ideas/concepts: estimating diffusion time- and length scales</strong></p>
+<ol>
+<li>If heat would only transport by diffusion and only vertically upwards, the heat equation would reduce to the one-dimensional diffusion equation 
+$\displaystyle \frac{\partial T}{\partial t} = \kappa \frac{\partial^2 T}{\partial z^2}$. Approximating the differentials gives $\displaystyle \frac{\Delta T}{\Delta t} = \kappa \frac{\Delta T}{\Delta z^2}$, which reduces to $\displaystyle \Delta t = \frac{\Delta z^2}{\kappa}$ or $\Delta z = \sqrt{\kappa \Delta t}$. Using $\Delta z = 3000$ km = $3\times 10^6$ m and $\kappa=10^{-6}$ $\mathrm {m^2/s}$, cooling the mantle takes approximately $\Delta t=9 \times 10^{18}$ s = 285 Gyrs, more than 60 times the age of the Earth. This is clearly an overestimate: Earth does not only use diffusion to transport heat, but advection as well (which expresses itself as plate tectonics, more about this later). This will speed up the cooling significantly.</li>
+<li>The simplest way to solve this is to assume a reference frame that moves with the water, so that, in that reference frame, the water is not moving. The flow speed will determine how long the water will be in contact with the mine walls, and hence the heating time. In this case, heat will predominantly flow in the two directions perpendicular to the flow direction, so, assuming diffusion of heat into a laminar flow of water will govern the heat transfer in this case (an assumption that could easily be challenged!), we have to consider the 2-D heat equation 
+$\displaystyle \frac{\partial T}{\partial t} = \kappa \frac{\partial^2 T}{\partial y^2} + \kappa \frac{\partial^2 T}{\partial z^2}$. Approximating the differentials gives 
+$\displaystyle \frac{\Delta T}{\Delta t} = \kappa \frac{\Delta T}{\Delta y^2} + \kappa \frac{\Delta T}{\Delta z^2}$. Dividing by $\Delta T$, and substituting $\Delta y = \Delta z = 1$ m (half the width or height of the mine tunnel), gives a minimum heating time of $\displaystyle \Delta t = \frac{2}{\kappa}$. This requires a maximum velocity $\displaystyle v = \frac{1000}{2/\kappa} = 500 \kappa$. Using $\displaystyle \kappa = \frac{k}{\rho C_P} \approx 1.4 \times 10^{-7}$ ${\mathrm m^2/sec}$, this gives a velocity of approximately $7 \times 10^{-5}$ m/s, or about 6 m/day.</li>
+</ol>
+</li>
+<li><p><strong>Key ideas/concepts: estimating diffusion time- and length scales 2: penetration of periodic surface temperature fluctuations</strong></p>
+<ol>
+<li>Heat only transports by diffusion in these cases, so the heat equation reduces to 
+$\displaystyle \frac{\partial T}{\partial t} = \kappa \frac{\partial^2 T}{\partial z^2}$. 
+Approximating the differentials gives $\displaystyle \frac{\Delta T}{\Delta t} = \kappa \frac{\Delta T}{\Delta z^2}$, which reduces to $\displaystyle \Delta t = \frac{\Delta z^2}{\kappa}$ or $\Delta z = \sqrt{\kappa \Delta t}$. 
+Penetration depth of daily heat (roughly 12 hours of heating, 12 hours of cooling)  is (using $\kappa=10^{-6}$ ${\mathrm m^2/s}$ ) = 21 cm, and for yearly heat (half a year of heating, half a year of cooling) is $\sim 4$ m. 
+Note that these answers are order-of-magnitude estimates only, so more than one significant figure/digit in the answer is probably not justified.</li>
+<li>The amplitude of the fluctuation is controlled by the 
+$\displaystyle \exp{\left(-z\sqrt{\frac{\omega}{2 \kappa}}\right)}$ part of the solution. A daily fluctuation has a period of 24 hours, which can be translated into $\displaystyle \omega = \frac{2 \pi}{\tau}$. Setting $\displaystyle \exp{\left(-z\sqrt{\frac{\pi}{\kappa \tau}}\right)} = \frac{1}{e}$ gives  $\displaystyle z=\sqrt{\frac{\kappa \tau}{\pi}}$. For daily and yearly fluctuations, this gives a skin depth of 17 cm and 3.2 m, respectively. These values are somewhat lower than the rough estimates in part a, but still comparable. </li>
+</ol>
+</li>
+<li><p><strong>Key ideas/concepts: competition between advection and diffusion at mid-ocean ridges</strong></p>
+<ol>
+<li>Relevant terms are diffusion and advection terms in $z$-direction only, since the MOR is in approximate steady state, and radiogenic heat production is not important on the short timescale. So:<br>
+$\displaystyle \kappa \frac{d^2T}{dz^2} - v_z\frac{dT}{dz} = 0$.
+\item Approximating the differentials gives $\displaystyle \kappa \frac{\Delta T}{\Delta z^2} - v_z\frac{\Delta T}{\Delta z} = 0$, or $\displaystyle \Delta z = \frac{\kappa}{v_z}$.
+\item Using $\kappa=10^{-6}$ $\mathrm{m^2/s}$ and 1 cm/yr and 10 cm/yr as slow- and fast spreading rates, this gives an approximate thickness of 3000 m and 300 m, respectively.<ol>
+<li>Potential shortcomings are 1) the negligence of latent heat of crustal solidifications, 2) slow spreading ridges are probably not in steady state, and 3) cooling from hydrothermal circulation. 
+\end{enumerate}
+\end{altans}</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>Key ideas/concepts: the significance of radiogenic heat production</strong></p>
+<ol>
+<li>Without diffusion or advection, the heat equation reduces to: $\displaystyle \frac{dT}{dt}=\frac{H}{C_P} = 2x10^{-12}$ J/kg,s / 1000 J/kg,K = $2 \times 10^{-15}$ K/s = $0.063$ K/Myr.</li>
+<li>This is about 6 K over the 100-Myr lifespan of oceanic lithosphere. This illustrates that radiogenic heating is negligible in oceanic mantle lithosphere.  </li>
+</ol>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
