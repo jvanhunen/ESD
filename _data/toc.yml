@@ -38,13 +38,13 @@
 - header: Lecture notes and Exercises
 
 # A chapter w/ a collection of sections beneath it
-- title: The heat equation
+- title: Week 1
   url: /week1
   not_numbered: true
   expand_sections: true
   sections:
   - title: The Heat Equation
-    url: /week1
+    url: /heat_equation
     not_numbered: true
   - title: Exercises
     url: /exercises1
