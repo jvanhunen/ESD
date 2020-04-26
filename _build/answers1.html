@@ -11,7 +11,7 @@ prev_page:
 next_page:
   url: 
 suffix: .ipynb
-search: frac delta t m kappa displaystyle z heat partial k mathrm s gives diffusion times units w earth style key ideas concepts dt flow only ol equation sqrt cooling not heating type dz j lithosphere pi approximating differentials reduces using advection cm lower q temperature direction km surface mantle respectively production oceanic y half daily hours tau radiogenic vz answers transfer text css list deriving physical parameters thickness area r because x estimating length scales transport approximately speed reference frame mine case into velocity cp penetration fluctuations depth yearly year estimates probably fluctuation exp left omega right part ridges terms
+search: frac delta t kappa displaystyle m z heat partial k gives s diffusion mathrm dt key ideas concepts times only sqrt cooling not heating cm units w pi equation reduces advection earth style dz j flow lithosphere approximating differentials using daily hours tau radiogenic vz ol respectively production oceanic half type lower temperature direction surface mantle penetration fluctuations depth yearly year estimates probably fluctuation exp left omega right part ridges terms approximate steady state yr slow spreading kg myr answers q thickness km x estimating length scales into y cp transfer text css list deriving physical parameters area r because
 
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
@@ -70,9 +70,7 @@ $\displaystyle \exp{\left(-z\sqrt{\frac{\omega}{2 \kappa}}\right)}$ part of the 
 $\displaystyle \kappa \frac{d^2T}{dz^2} - v_z\frac{dT}{dz} = 0$.
 \item Approximating the differentials gives $\displaystyle \kappa \frac{\Delta T}{\Delta z^2} - v_z\frac{\Delta T}{\Delta z} = 0$, or $\displaystyle \Delta z = \frac{\kappa}{v_z}$.</li>
 <li>Using $\kappa=10^{-6}$ $\mathrm{m^2/s}$ and 1 cm/yr and 10 cm/yr as slow- and fast spreading rates, this gives an approximate thickness of 3000 m and 300 m, respectively.</li>
-<li>Potential shortcomings are 1) the negligence of latent heat of crustal solidifications, 2) slow spreading ridges are probably not in steady state, and 3) cooling from hydrothermal circulation. 
-\end{enumerate}
-\end{altans}</li>
+<li>Potential shortcomings are 1) the negligence of latent heat of crustal solidifications, 2) slow spreading ridges are probably not in steady state, and 3) cooling from hydrothermal circulation. </li>
 </ol>
 </li>
 <li><p><strong>Key ideas/concepts: the significance of radiogenic heat production</strong></p>
@@ -81,6 +79,59 @@ $\displaystyle \kappa \frac{d^2T}{dz^2} - v_z\frac{dT}{dz} = 0$.
 <li>This is about 6 K over the 100-Myr lifespan of oceanic lithosphere. This illustrates that radiogenic heating is negligible in oceanic mantle lithosphere.  </li>
 </ol>
 </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>4. <strong>Key ideas/concepts: estimating diffusion time- and length scales 2: penetration of periodic surface temperature fluctuations</strong></p>
+<ol>
+<li>Heat only transports by diffusion in these cases, so the heat equation reduces to 
+$\displaystyle \frac{\partial T}{\partial t} = \kappa \frac{\partial^2 T}{\partial z^2}$. 
+Approximating the differentials gives $\displaystyle \frac{\Delta T}{\Delta t} = \kappa \frac{\Delta T}{\Delta z^2}$, which reduces to $\displaystyle \Delta t = \frac{\Delta z^2}{\kappa}$ or $\Delta z = \sqrt{\kappa \Delta t}$. 
+Penetration depth of daily heat (roughly 12 hours of heating, 12 hours of cooling)  is (using $\kappa=10^{-6}$ ${\mathrm m^2/s}$ ) = 21 cm, and for yearly heat (half a year of heating, half a year of cooling) is $\sim 4$ m. 
+Note that these answers are order-of-magnitude estimates only, so more than one significant figure/digit in the answer is probably not justified.</li>
+<li>The amplitude of the fluctuation is controlled by the 
+$\displaystyle \exp{\left(-z\sqrt{\frac{\omega}{2 \kappa}}\right)}$ part of the solution. A daily fluctuation has a period of 24 hours, which can be translated into $\displaystyle \omega = \frac{2 \pi}{\tau}$. Setting $\displaystyle \exp{\left(-z\sqrt{\frac{\pi}{\kappa \tau}}\right)} = \frac{1}{e}$ gives  $\displaystyle z=\sqrt{\frac{\kappa \tau}{\pi}}$. For daily and yearly fluctuations, this gives a skin depth of 17 cm and 3.2 m, respectively. These values are somewhat lower than the rough estimates in part a, but still comparable. </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>5. <strong>Key ideas/concepts: competition between advection and diffusion at mid-ocean ridges</strong></p>
+<ol>
+<li>Relevant terms are diffusion and advection terms in $z$-direction only, since the MOR is in approximate steady state, and radiogenic heat production is not important on the short timescale. So:<br>
+$\displaystyle \kappa \frac{d^2T}{dz^2} - v_z\frac{dT}{dz} = 0$.
+\item Approximating the differentials gives $\displaystyle \kappa \frac{\Delta T}{\Delta z^2} - v_z\frac{\Delta T}{\Delta z} = 0$, or $\displaystyle \Delta z = \frac{\kappa}{v_z}$.</li>
+<li>Using $\kappa=10^{-6}$ $\mathrm{m^2/s}$ and 1 cm/yr and 10 cm/yr as slow- and fast spreading rates, this gives an approximate thickness of 3000 m and 300 m, respectively.</li>
+<li>Potential shortcomings are 1) the negligence of latent heat of crustal solidifications, 2) slow spreading ridges are probably not in steady state, and 3) cooling from hydrothermal circulation.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>6. <strong>Key ideas/concepts: the significance of radiogenic heat production</strong></p>
+<ol>
+<li>Without diffusion or advection, the heat equation reduces to: $\displaystyle \frac{dT}{dt}=\frac{H}{C_P} = 2x10^{-12}$ J/kg,s / 1000 J/kg,K = $2 \times 10^{-15}$ K/s = $0.063$ K/Myr.</li>
+<li>This is about 6 K over the 100-Myr lifespan of oceanic lithosphere. This illustrates that radiogenic heating is negligible in oceanic mantle lithosphere.  </li>
 </ol>
 
 </div>
